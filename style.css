@@ -1,0 +1,403 @@
+/* Paleta de colores
+#d4d8ca - Color 1 (Claro)
+#b0c9c5 - Color 2 (Medio Claro)
+#8fa3ac - Color 3 (Medio)
+#718097 - Color 4 (Medio Oscuro)
+#4f5c6d - Color 5 (Oscuro)
+*/
+
+/* Importa la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d4d8ca; /* Color 1 */
+    color: #4f5c6d; /* Color 5 */
+}
+
+header {
+    background-color: #718097; /* Color 4 */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    color: #d4d8ca; /* Color 1 */
+}
+
+.header h1 a {
+    text-decoration: none;
+    color: #d4d8ca;
+}
+
+/* Navegación */
+.var-nav {
+    background-color: #718097; /* Color 4 */
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: #d4d8ca; /* Color 1 */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #4f5c6d; /* Color 5 */
+}
+
+/* Menú Hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: #d4d8ca; /* Color 1 */
+    margin: 5px 0;
+}
+
+.menu-responsive {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-responsive.active{
+    display: flex;
+}
+
+.menu-responsive li {
+    list-style: none;
+}
+.menu-responsive li a {
+    color: #d4d8ca; 
+    text-decoration: none;
+}
+
+/* Secciones de contenido */
+.Presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #b0c9c5; /* Color 2 */
+}
+
+.imagen-pres {
+    flex: 1 1 300px;
+    background-color: #8fa3ac; /* Color 3 */
+    padding: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.Info-blog {
+    flex: 1 1 300px;
+    border-radius: 50px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 6);
+    background-color: rgba(255, 255, 255, 0.137); /* Color Blanco */
+    padding: 20px;
+    color: #4f5c6d; /* Color 5 */
+    overflow-wrap: break-word;
+}
+
+/* Bienvenida al blog*/
+
+.Bienvenida{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-de-bienvenida{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backdrop-filter: blur(90px);
+}
+
+.Tarjeta-Bienvenida{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.473);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.63);
+    text-align: center;
+}
+
+.Tarjeta-Bienvenida h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.Tarjeta-Bienvenida p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Galerías */
+.Galery1, .Galery2, .Galery3, .Galery4, .Galery5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 60vh;
+    padding: 20px;
+    background-color: #d4d8ca; /* Color 1 */
+    margin: 20px 0;
+}
+
+.Galery1 h1, .Galery2 h1, .Galery3 h1, .Galery4 h1, .Galery5 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4f5c6d; /* Color 5 */
+}
+
+.Carrusel {
+    height: 400px; /* Altura fija para el carrusel */
+    background-color: #8fa3ac; /* Color 3 */
+    text-align: center;
+}
+
+/* Carrusel */
+.carousel-container {
+    flex: 1 1 300px;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel {
+    width: 600px; /* Ajusta el ancho del carrusel */
+    height: 400px; /* Ajusta el alto del carrusel */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    max-width: 800px; /* Establece un ancho máximo para el carrusel */
+    max-height: 600px; /* Establece un alto máximo para el carrusel */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(0.4); /* Ajusta el tamaño de la imagen al tamaño exacto del carrusel */
+    transform-origin: top center; /* Establece el origen de la transformación en la esquina superior izquierda */
+    margin: auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnails img:hover,
+.thumbnails img.active {
+    border-color: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #4f5c6d; /* Color 5 */
+    color: #d4d8ca; /* Color 1 */
+    text-align: center;
+    padding: 20px;
+}
+
+footer h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #d4d8ca; /* Color 1 */
+}
+
+footer h2 a {
+    text-decoration: none;
+    color: #d4d8ca;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .Presentacion, .Comentarios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen-pres, .Info-blog, .Comentarios section, .Comentarios .Coment {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-responsive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-responsive li {
+        margin-bottom: 10px;
+    }
+
+    .Presentacion {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .imagen-pres, .Info-blog {
+        padding: 15px;
+    }
+
+    /* Carrusel y Texto Responsivo */
+    .Galery1, .Galery2, .Galery3, .Galery4, .Galery5 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Info-blog {
+        margin-bottom: 20px; /* Se muestra primero */
+        width: 100%;
+    }
+
+    .carousel-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-responsive li {
+        margin: 5px 0;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .Icon-redes a img {
+        width: 25px;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    .Presentacion {
+        padding: 5px;
+    }
+
+    .imagen-pres, .Info-blog {
+        padding: 10px;
+    }
+
+    .carousel {
+        height: 200px;
+    }
+
+    .thumbnails img {
+        width: 50px;
+        height: 38px;
+    }
+}
+
